@@ -90,7 +90,7 @@ const SpeedVerificationApp = () => {
   };
 
   // Load violation history from the contract
-  const loadViolationHistory = async (address) => {
+  const loadViolationHistory = async () => {
     // This would call your contract's function to get violation history
     // For demo purposes, we'll use mock data
     setViolationHistory([
@@ -223,13 +223,12 @@ const SpeedVerificationApp = () => {
                   Enter Vehicle Speed (km/h)
                 </label>
                 <input
-                  type="range"
-                  min="50"
-                  max="150"
+                  type="text"
                   value={speed}
-                  onChange={(e) => setSpeed(parseInt(e.target.value))}
-                  className="w-full accent-blue-600"
+                  onChange={(e) => setSpeed(parseInt(e.target.value) || 0)}
+                  className="w-full border p-2 rounded"
                 />
+
                 <div className="flex justify-between">
                   <span className="text-blue-600">50 km/h</span>
                   <span className="font-bold text-blue-800">{speed} km/h</span>
