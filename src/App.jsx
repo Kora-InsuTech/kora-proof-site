@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import "./index.css";
 
@@ -236,12 +237,12 @@ const SpeedVerificationApp = () => {
                 </div>
                 <div className="mt-1 text-sm text-blue-600 text-center">
                   This application will prove if your speed is{" "}
-                  {speed > 80 ? (
+                  {speed > 120 ? (
                     <span className="text-red-600 font-medium">above</span>
                   ) : (
                     <span className="text-green-600 font-medium">within</span>
                   )}{" "}
-                  the 80 km/h limit
+                  the 120 km/h limit
                 </div>
               </div>
 
@@ -311,11 +312,11 @@ const SpeedVerificationApp = () => {
                         Result:{" "}
                         {proofData.publicSignals[0] === "1" ? (
                           <span className="text-red-600 bg-red-50 p-1 rounded border border-red-200">
-                            Speed &gt; 80 km/h (Violation)
+                            Speed &gt; 120 km/h (Violation)
                           </span>
                         ) : (
                           <span className="text-green-600 bg-green-50 p-1 rounded border border-green-200">
-                            Speed ≤ 80 km/h (Compliant)
+                            Speed ≤ 120 km/h (Compliant)
                           </span>
                         )}
                       </p>
@@ -365,7 +366,7 @@ const SpeedVerificationApp = () => {
                             </p>
                           </div>
                           <div className="bg-blue-100 text-red-800 px-2 py-1 rounded border border-blue-300">
-                            Speed &gt; 80 km/h
+                            Speed &gt; 120 km/h
                           </div>
                         </div>
                       </div>
@@ -379,10 +380,10 @@ const SpeedVerificationApp = () => {
                   How It Works:
                 </h4>
                 <ol className="text-sm text-blue-700 list-decimal pl-8 space-y-1">
-                  <li>Enter your vehicle's speed with the slider</li>
+                  <li>Enter your vehicle's speed </li>
                   <li>
                     Generate a zero-knowledge proof (ZKP) that only proves if
-                    speed {">"} 80 km/h
+                    speed {">"} 120 km/h
                   </li>
                   <li>Submit the ZKP to the blockchain for verification</li>
                   <li>
