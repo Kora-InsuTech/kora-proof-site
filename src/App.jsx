@@ -415,10 +415,10 @@ const SpeedVerificationApp = () => {
 
               <div className="border-t border-blue-200 pt-6 mt-6">
                 <h2 className="text-lg font-semibold mb-4 text-center text-blue-800">
-                  Violation History
+                  Driving History
                 </h2>
                 {violationHistory.length === 0 ? (
-                  <p className="text-blue-600 text-center">No violations recorded</p>
+                  <p className="text-blue-600 text-center">No Speed recorded</p>
                 ) : (
                   <div className="space-y-3">
                     {violationHistory.map((violation, index) => (
